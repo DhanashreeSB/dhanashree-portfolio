@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
+import { AboutPage } from './pages/AboutPage/AboutPage';
+import { HomePage } from './pages/HomePage/HomePage';
+import { ProjectPage } from './pages/ProjectPage/ProjectPage';
+import { CheckFlexGap } from './shared/CheckFlexGap/CheckFlexGap';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CheckFlexGap/>
+      <BrowserRouter>
+        <Routes>
+          <Route path={'/'} element={<HomePage/>}/>
+          <Route path={'/about'} element={<AboutPage/>}/>
+          <Route path={'/projects'} element={<ProjectPage/>}/>
+          <Route path={'/experience'} element={<AboutPage/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,0 +1,24 @@
+#leaf-mobile {
+    animation: leaf-animation 1s infinite alternate;
+}
+
+#leaf-desktop {
+    animation: leaf-animation 1s infinite alternate;
+}
+
+#leaf-tablet {
+    animation: leaf-animation 1s infinite alternate;
+}
+
+.contact div:not(:last-child){
+    margin-right: 1.8rem;
+}
+
+@keyframes leaf-animation {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(-5%);
+    }
+}
