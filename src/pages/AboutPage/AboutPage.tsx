@@ -5,7 +5,7 @@ import { NavigationMenu } from '../../shared/NavigationMenu/NavigationMenu'
 export const AboutPage = () => {
   return (
     <div>
-      <NavigationMenu/>
+      <NavigationMenu isSticky={true}/>
       <About/>
     </div>
   )

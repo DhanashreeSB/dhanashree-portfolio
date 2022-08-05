@@ -1,16 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import reportWebVitals from "./reportWebVitals";
+import { InversifyProvider } from "./hooks/InversifyProvider";
+import container from "./container/InversifyContainer";
+import { RootStoreI } from "./store/RootStore";
+import { SERVICE_IDENTIFIER } from "./constants/InversifyConstants";
+import {Provider} from 'mobx-react'
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
+
+const rootStore: RootStoreI = container.get(SERVICE_IDENTIFIER.STATE_SERVICE)
+
 root.render(
   // <React.StrictMode>
+  <InversifyProvider container={container}>
+    <Provider {...rootStore}>
     <App />
+    </Provider>
+  </InversifyProvider>
   // </React.StrictMode>
 );
 

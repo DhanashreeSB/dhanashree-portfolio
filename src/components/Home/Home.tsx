@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { DeveloperIllustration } from "../../images/DeveloperIllustration";
 import { Skills } from "../Skills/Skills";
 import "./Home.css";
@@ -9,6 +9,8 @@ import { useIsInViewport } from "../../hooks/UseIsInViewPort";
 export const Home = () => {
   const skillsRef = useRef(null);
   const homeRef = useRef(null);
+
+  const [width, setWidth] = useState(window.innerWidth);
 
   // @ts-ignore
   const executeScroll = () => skillsRef.current!.scrollIntoView();
@@ -25,17 +27,33 @@ export const Home = () => {
     );
   };
 
-  useEffect(()=>{
-    if (!homeIsInViewport) {
-      document.querySelector("#sticky")!.classList.add("sticky");
-      document.querySelector("#skills-section")!.classList.add("skills-section");
-    }
+  useEffect(() => {
+    if (window.innerWidth >= 768) {
+      if (!homeIsInViewport) {
+        document.querySelector("#sticky")!.classList.add("sticky-nav");
+        document
+          .querySelector("#skills-section")!
+          .classList.add("skills-section");
+      }
 
-    if(homeIsInViewport) {
-      document.querySelector("#sticky")!.classList.remove("sticky");
-      document.querySelector("#skills-section")!.classList.remove("skills-section");
+      if (homeIsInViewport) {
+        document.querySelector("#sticky")!.classList.remove("sticky-nav");
+        document
+          .querySelector("#skills-section")!
+          .classList.remove("skills-section");
+      }
     }
-  })
+  });
+
+  const update = (): void => {
+    setWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", update);
+    return (): void => {
+      window.removeEventListener("resize", update);
+    };
+  }, []);
 
   return (
     <>
@@ -44,10 +62,7 @@ export const Home = () => {
         id="main-section"
         ref={homeRef}
       >
-        <div
-          className="flex gap-4 items-center justify-around flex-wrap"
-          
-        >
+        <div className="flex gap-4 items-center justify-around flex-wrap">
           <div className="font-semibold text-lg md:text-3xl self-center text-center">
             <p>Hi, I am Dhanashree Bendarkar.</p>
             <p className="pt-4 text-base md:text-xl">
@@ -61,7 +76,7 @@ export const Home = () => {
                 View skills
               </button>
             </div>
-            <div className="flex pt-16 gap-4 contact justify-center pb-10 xl:pb-0">
+            <div className="flex pt-16 gap-4 contact justify-center md:pb-10 xl:pb-0">
               <div
                 className="text-black hover:text-blue-700 cursor-pointer"
                 onClick={openGithub}
@@ -79,8 +94,10 @@ export const Home = () => {
           <DeveloperIllustration />
         </div>
       </div>
-      <div className="my-10 mx-6 md:mx-36 rounded-md" ref={skillsRef} id="skills-section">
-        <Skills />
+      <div id="skills-section">
+        <div className="my-10 mx-6 md:mx-36 rounded-md" ref={skillsRef}>
+          <Skills />
+        </div>
       </div>
     </>
   );

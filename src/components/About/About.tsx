@@ -49,13 +49,13 @@ export const About = () => {
   }, [aboutMe]);
 
   return (
-    <div className="px-10 mt-4">
+    <div className="px-10 mt-24">
       <div className="flex px-6 content-center">
         <div className="text-2xl font-semibold self-center">About me</div>
         <div className="flex ml-auto">
-          <button className="bg-violet-700 w-fit rounded-xl text-white px-4 hover:bg-violet-900 text-xl py-4 ">
+          {/* <button className="bg-violet-700 w-fit rounded-xl text-white px-4 hover:bg-violet-900 text-xl py-4 ">
             Academics
-          </button>
+          </button> */}
           {/* <button className="bg-violet-700 w-fit rounded-full text-white px-4 hover:bg-violet-900 text-xl">
             Achievements
           </button> */}

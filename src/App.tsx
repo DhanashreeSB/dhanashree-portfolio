@@ -5,12 +5,14 @@ import { AboutPage } from './pages/AboutPage/AboutPage';
 import { HomePage } from './pages/HomePage/HomePage';
 import { ProjectPage } from './pages/ProjectPage/ProjectPage';
 import { CheckFlexGap } from './shared/CheckFlexGap/CheckFlexGap';
+import TopScroll from './shared/TopScroll/TopScroll';
 
 function App() {
   return (
     <div className="App">
       <CheckFlexGap/>
       <BrowserRouter>
+      <TopScroll/>
         <Routes>
           <Route path={'/'} element={<HomePage/>}/>
           <Route path={'/about'} element={<AboutPage/>}/>
