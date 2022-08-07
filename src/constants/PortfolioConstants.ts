@@ -106,6 +106,6 @@ export const experiencesGetStartedLLP: ExperienceI[] = [
     },
     {
         title: 'Hadoop administration',
-        experience: 'Studied hHadoop administration and worked with hive, sqoop on cloud platform'
+        experience: 'Studied Hadoop administration and worked with hive, sqoop on cloud platform'
     }
 ]
