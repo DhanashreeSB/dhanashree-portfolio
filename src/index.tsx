@@ -8,22 +8,22 @@ import { InversifyProvider } from "./hooks/InversifyProvider";
 import container from "./container/InversifyContainer";
 import { RootStoreI } from "./store/RootStore";
 import { SERVICE_IDENTIFIER } from "./constants/InversifyConstants";
-import {Provider} from 'mobx-react'
+import { Provider } from "mobx-react";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
-const rootStore: RootStoreI = container.get(SERVICE_IDENTIFIER.STATE_SERVICE)
+const rootStore: RootStoreI = container.get(SERVICE_IDENTIFIER.STATE_SERVICE);
 
 root.render(
-  // <React.StrictMode>
-  <InversifyProvider container={container}>
-    <Provider {...rootStore}>
-    <App />
-    </Provider>
-  </InversifyProvider>
-  // </React.StrictMode>
+  <React.StrictMode>
+    <InversifyProvider container={container}>
+      <Provider {...rootStore}>
+        <App />
+      </Provider>
+    </InversifyProvider>
+  </React.StrictMode>
 );
 
 // If you want your app to work offline and load faster, you can change

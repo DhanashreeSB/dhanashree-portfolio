@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -18,7 +18,7 @@ export const NavigationMenu = observer((props: Props) => {
   const { navigationState } = useMobXStores<{
     navigationState: NavigationStoreI;
   }>();
-  const [width, setWidth] = useState(window.innerWidth);
+  // const [width, setWidth] = useState(window.innerWidth);
 
   // useEffect(()=>{
   //   const btnNavEl = document.querySelector(".btn-mobile-nav");
@@ -36,16 +36,16 @@ export const NavigationMenu = observer((props: Props) => {
     navigationState.hideNavigationMenu();
   };
 
-  const update = (): void => {
-    setWidth(window.innerWidth);
-  };
+  // const update = (): void => {
+  //   setWidth(window.innerWidth);
+  // };
 
-  useEffect(() => {
-    window.addEventListener("resize", update);
-    return (): void => {
-      window.removeEventListener("resize", update);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("resize", update);
+  //   return (): void => {
+  //     window.removeEventListener("resize", update);
+  //   };
+  // }, []);
 
   // useEffect(() => {
   //   if (window.innerWidth < 768) {

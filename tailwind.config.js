@@ -113,6 +113,7 @@ module.exports = {
       72: '18rem',
       80: '20rem',
       96: '24rem',
+      97: '10px'
     },
     animation: {
       none: 'none',
@@ -649,6 +650,7 @@ module.exports = {
       max: 'max-content',
       fit: 'fit-content',
       prose: '65ch',
+      '960': '960px',
       ...breakpoints(theme('screens')),
     }),
     minHeight: {

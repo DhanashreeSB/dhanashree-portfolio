@@ -1,16 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { DeveloperIllustration } from "../../images/DeveloperIllustration";
 import { Skills } from "../Skills/Skills";
 import "./Home.css";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { useIsInViewport } from "../../hooks/UseIsInViewPort";
+import Typer from "../../shared/Typer/Typer";
 
 export const Home = () => {
   const skillsRef = useRef(null);
   const homeRef = useRef(null);
 
-  const [width, setWidth] = useState(window.innerWidth);
+  // const [width, setWidth] = useState(window.innerWidth);
 
   // @ts-ignore
   const executeScroll = () => skillsRef.current!.scrollIntoView();
@@ -45,15 +46,16 @@ export const Home = () => {
     }
   });
 
-  const update = (): void => {
-    setWidth(window.innerWidth);
-  };
-  useEffect(() => {
-    window.addEventListener("resize", update);
-    return (): void => {
-      window.removeEventListener("resize", update);
-    };
-  }, []);
+  // const update = (): void => {
+  //   setWidth(window.innerWidth);
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("resize", update);
+  //   return (): void => {
+  //     window.removeEventListener("resize", update);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -99,6 +101,7 @@ export const Home = () => {
           <Skills />
         </div>
       </div>
+      <Typer dataText={['data1']}/>
     </>
   );
 };
