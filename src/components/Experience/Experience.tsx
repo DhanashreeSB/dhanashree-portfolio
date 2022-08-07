@@ -1,5 +1,5 @@
 import React from "react";
-import { experiences } from "../../constants/PortfolioConstants";
+import { experiencesGetStartedLLP, experiencesTCS } from "../../constants/PortfolioConstants";
 import "./Experience.css";
 import { ExperienceCard } from "./ExperienceCard";
 
@@ -21,11 +21,23 @@ export const Experience = () => {
             ></div>
             <div>
               <div className="pb-2 font-semibold">
-                Tata Consultancy Services (Present)
+                Tata Consultancy Services (Present) - Systems Engineer (Grade C2)
               </div>
-
               <div className="experienceContainer">
-                {experiences.map((experience, index) => {
+                {experiencesTCS.map((experience, index) => {
+                  return (
+                    <ExperienceCard
+                      title={experience.title}
+                      experience={experience.experience}
+                    />
+                  );
+                })}
+              </div>
+              <div className="py-2 font-semibold">
+                GetStarted LLP - Intern (December 2018 - February 2019)
+              </div>
+              <div className="experienceContainer">
+                {experiencesGetStartedLLP.map((experience, index) => {
                   return (
                     <ExperienceCard
                       title={experience.title}

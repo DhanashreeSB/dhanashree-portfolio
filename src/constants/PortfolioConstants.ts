@@ -64,7 +64,7 @@ export const projects:ProjectI[] = [
     }
 ]
 
-export const experiences: ExperienceI[] = [
+export const experiencesTCS: ExperienceI[] = [
     {
         title: 'PWAs',
         experience: 'Created three responsive progressive web apps ground up from scratch in ReactJS, typescript, TailwindCSS, and mobx.'
@@ -96,9 +96,16 @@ export const experiences: ExperienceI[] = [
     {
         title: 'Unit testing',
         experience:'Worked with Jest to write unit test cases of ReactJS components.'
+    }
+]
+
+export const experiencesGetStartedLLP: ExperienceI[] = [
+    {
+        title: 'Android app development',
+        experience: 'Android app developed for IoT application'
     },
     {
-        title: '',
-        experience:''
+        title: 'Hadoop administration',
+        experience: 'Studied hHadoop administration and worked with hive, sqoop on cloud platform'
     }
 ]

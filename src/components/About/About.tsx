@@ -10,7 +10,11 @@ export const About = () => {
       "Hello!",
       "My name is Dhanashree Bendarkar.",
       `I'm currently working in TATA CONSULTANCY SERVICES as software engineer.`,
-      "My key responsibility include frontend development. I've also worked on NodeJS and some Azure cloud services",
+      "My key responsibility in TCS include frontend development.",
+      "I've also worked on NodeJS and some Azure cloud services.",
+      "I've created multiple progressive web apps in ReactJS, HTML and CSS.",
+      "I have completed my graduation in computer science engineering with 9.23 CGPA in 2020.",
+      "Thank you!",
     ];
   }, []);
 
@@ -128,6 +132,36 @@ export const About = () => {
             <Typer dataText={[aboutMe[3]]} />
           </p>
         </div>
+        <div className="lsp pt-4">
+          <p className="flex">
+            <span className="pr-2">&gt;</span>{" "}
+            <Typer dataText={[aboutMe[4]]} />
+          </p>
+        </div>
+        <div className="lsp pt-4">
+          <p className="flex">
+            <span className="pr-2">&gt;</span>{" "}
+            <Typer dataText={[aboutMe[5]]} />
+          </p>
+        </div>
+        <div className="lsp pt-4">
+          <p className="flex">
+            <span className="pr-2">&gt;</span>{" "}
+            <Typer dataText={[aboutMe[6]]} />
+          </p>
+        </div>
+        <div className="lsp pt-4">
+          <p className="flex">
+            <span className="pr-2">&gt;</span>{" "}
+            <Typer dataText={[aboutMe[7]]} />
+          </p>
+        </div>
+        {/* <div className="lsp pt-4">
+          <p className="flex">
+            <span className="pr-2">&gt;</span>{" "}
+            <Typer dataText={[aboutMe[8]]} />
+          </p>
+        </div> */}
         {/* <div className="lsp pt-4">
           <p className="flex">
             <span className="pr-2">&gt;</span>{" "}

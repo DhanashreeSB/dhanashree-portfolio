@@ -11,6 +11,7 @@ export const DropdownNavigationMenu = observer(() => {
   let activeClassName =
     "font-bold rounded-lg text-black text-xl activeClass my-4";
   let linkClassName = "font-semibold text-lg md:text-xl my-4";
+  let navListClassName = "py-2"
 
   const handleNavClick = () => {
     navigationState.hideNavigationMenu();
@@ -18,8 +19,8 @@ export const DropdownNavigationMenu = observer(() => {
 
   return (
     <nav className="bg-white opacity-60 text-left w-full pl-4 h-screen">
-      <ul className="flex flex-col">
-        <li>
+      <ul className="flex flex-col mt-8">
+        <li className={`${navListClassName}`}>
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -30,7 +31,7 @@ export const DropdownNavigationMenu = observer(() => {
             Home
           </NavLink>
         </li>
-        <li>
+        <li className={`${navListClassName}`}>
           <NavLink
             to="/projects"
             className={({ isActive }) =>
@@ -41,7 +42,7 @@ export const DropdownNavigationMenu = observer(() => {
             Projects
           </NavLink>
         </li>
-        <li>
+        <li className={`${navListClassName}`}>
           <NavLink to="/experience" onClick={handleNavClick}>
             {({ isActive }) => (
               <span className={isActive ? activeClassName : linkClassName}>
@@ -50,7 +51,7 @@ export const DropdownNavigationMenu = observer(() => {
             )}
           </NavLink>
         </li>
-        <li>
+        <li className={`${navListClassName}`}>
           <NavLink to="/about" onClick={handleNavClick}>
             {({ isActive }) => (
               <span className={isActive ? activeClassName : linkClassName}>
