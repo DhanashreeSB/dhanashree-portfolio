@@ -4,31 +4,25 @@ import { ProjectI } from "../models/Project.interface";
 export const projects:ProjectI[] = [
     {
         name: 'Todo application',
-        description: 'This application is built ReactJS and redux. It is deployed on netlify.',
+        description: 'This application is built using ReactJS and redux. It is deployed on netlify.',
         source: 'https://github.com/DhanashreeSB/react-redux-todoApp',
         live: 'https://todoapp-dhanashree.netlify.app'
     },
     {
         name: 'Book store web application',
-        description: 'This application is built using HTML and CSS and Bootstrap. It is deployed on GitHub Pages.',
+        description: 'This application is built using HTML, CSS and Bootstrap. It is deployed on GitHub Pages.',
         source: 'https://github.com/DhanashreeSB/static-book-store-bootstrap-webapp',
         live: 'https://dhanashreesb.github.io/static-book-store-bootstrap-webapp/'
     },
     {
         name: 'Dashboard using bootstrap',
-        description: 'This application is built using HTML and CSS and Bootstrap. It is deployed on GitHub Pages.',
+        description: 'This application is built using HTML, CSS and Bootstrap. It is deployed on GitHub Pages.',
         source: 'https://github.com/DhanashreeSB/static-bootstrap-dashboard',
         live: 'https://dhanashreesb.github.io/static-bootstrap-dashboard/'
     },
     {
-        name: 'Book store web application',
-        description: 'This application is built using HTML and CSS and Bootstrap. It is deployed on GitHub Pages.',
-        source: 'https://github.com/DhanashreeSB/static-book-store-bootstrap-webapp',
-        live: 'https://dhanashreesb.github.io/static-book-store-bootstrap-webapp/'
-    },
-    {
         name: 'PhotoX webapp',
-        description: 'This application is built using HTML and CSS and Bootstrap. It is deployed on GitHub Pages.',
+        description: 'This application is built using HTML, CSS and Bootstrap. It is deployed on GitHub Pages.',
         source: 'https://github.com/DhanashreeSB/static-photoX-bootstrap-website',
         live: 'https://dhanashreesb.github.io/static-photoX-bootstrap-website/'
     },
